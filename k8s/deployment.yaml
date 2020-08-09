@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: file-gen-backend
+  namespace: sachs
+  labels:
+    app: file-gen-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: file-gen-backend
+  template:
+    metadata:
+      labels:
+        app: file-gen-backend
+    spec:
+      containers:
+      - name: file-gen-backend
+        image: registry.datexis.com/ksachs/file-gen-backend:latest
+        ports:
+        - name: client-port
+          containerPort: 5005
+          protocol: TCP
+      imagePullSecrets:
+      - name: private-registry-auth
+      schedulerName: default-scheduler

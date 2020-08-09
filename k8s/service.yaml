@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: file-gen-backend-service
+  namespace: sachs
+spec:
+  ports:
+  - protocol: TCP
+    port: 5005
+  selector:
+    app: file-gen-backend
