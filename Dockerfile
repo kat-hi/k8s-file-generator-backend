@@ -15,5 +15,6 @@ RUN pip install -r requirements.txt --no-cache-dir --compile
 ENV PYTHONUNBUFFERED=1
 
 ENV FLASK_ENV=development
+ENV FLASK_APP=app.py
 
 CMD flask run --host 0.0.0.0
