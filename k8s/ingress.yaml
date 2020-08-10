@@ -17,4 +17,4 @@ spec:
       paths:
       - backend:
           serviceName: file-gen-backend-service
-          servicePort: 5005
+          servicePort: 5000

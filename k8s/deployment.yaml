@@ -20,7 +20,7 @@ spec:
         image: registry.datexis.com/ksachs/file-gen-backend:latest
         ports:
         - name: client-port
-          containerPort: 5005
+          containerPort: 5000
           protocol: TCP
       imagePullSecrets:
       - name: private-registry-auth

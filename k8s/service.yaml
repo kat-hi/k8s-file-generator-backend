@@ -6,6 +6,6 @@ metadata:
 spec:
   ports:
   - protocol: TCP
-    port: 5005
+    port: 5000
   selector:
     app: file-gen-backend
